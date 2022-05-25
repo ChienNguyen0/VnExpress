@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VnExpress - Báo tiếng Việt nhiều người xem nhất</title>
+  <link rel="stylesheet" href="../Assets/Styles/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header__heading -->
+  <div class="header__heading">
+    <!-- left -->
+    <div class="header__heading-swap-left">
+      <div class="header__heading-logo">
+        <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v606/v2_2019/pc/graphics/logo.svg" alt="logo-Vn Express" />
+      </div>
+      <div class="header__heading-time">Chủ nhật, 22/5/2022</div>
+    </div>
+
+    <!-- Right -->
+    <div class="header__heading-swap-right">
+      <div class="header__heading-swap-btn">
+        <i class="header__heading-icon-time fa-solid fa-clock fa-xl"> </i>
+        <span class="header__heading-btn-newest">Mới nhất</span>
+      </div>
+      <div class="header__heading-swap-btn">
+        <img class="header__heading-img"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEWfIk7+/f3///+XADubCkSeHkycEUaWADanOl7GiZvUqrb37PCeFknRoq/Kmafw4ubIj6CpRGTBgpTbusP68/biyNC2ZX2XADqVADSZAD/o0djIkaHYsLyiJ1Pfv8mtSmvt2t+lMVmzYHq8c4mxWHStUG2+eo25bYT+Yi51AAAFGUlEQVR4nO3dfVuqPADHcRgMCR9Qj4SApZXa+3+Hh53uW3JMGzDZQ7/vv3nVPpcCxgZ4RFi5+Iw9S3t7r7JvFE/k273kEdU90P7RqAgX94TTuLCY91/hrLwpzCb2++roNrkhzLa6x6aqSSIUTgPdA1PXthQJTzPd41IXnQmErw69hfXupmoLV07sZf6Phi1hmuselNqKV144D3WPSW3RmRd+OLSfYdEVL9w7tRnWhbwwdk04gdD6ILS/jkIahUY2uz3qDkIaBsVxMTey5zAIbxzI5YXFKjkQc0t3x2KQkOZL9lPf2OrBJYFo7JJCys556Eb8FEnfBIOXFOaZ8T6fESd9heGTDcCaOG9vi1JCGpv/Ef2KHFvDlxJGlSVAn+xa/95KCQsrtkIWObTOMskJN9YISeu4LyOsN8Nvv8LImvG980QZYbS+/AZSVgsDe20GuOA3RClhc6wgyUT3l2xBwbIZYOtMWmehiafivu3rIYQQQk1BCCGE+oMQQgj1ByGEEOoPQggh1B+EEEKov5GFNBq9cc9501O1HLsnpfMWPwnrF2vIvwyw39xTJ2EzUaWhnvOHNgn7zQHbJOw3j2+TsLUZOiYkSb/1NNYIhReLuCQkh5ee69psELKhz/O+axN7C+8epNXml/NT//WlfYXkMNaK4uoYBeGNpb8PFf4Za2lKRIet8+4vFH9uxg1CFoTXL4Zw7CBkQXj9YgjHDkIWhNcv/lXCXd73LLbCC1kfKiyfep7EXsdFoUpp6n/A02wZq5kEMvUsRj0Sfy08K+GK8B8yU/FJNVjIdsYK7gZktNAnH5HjQt/3Bn9ODReS8+A30XThbvDXItOF6eB9zSOECrr8PTJ4Q1S/UuG4S4Y2T5s/2J4Q1C306PBT2NvmymrybJ5QQQWEXYKQBaHyIOwUhCwIlQdhpyBkQag8CDsFIQtC5UHYKQhZECoPwk5ByIJQeYYLFVxhOTFaSPfrwX0cTJ63UHOF5eXvGTj39CvmD1UK3Z8Ddn8e3/W1GAreQrOFSp6QZrCQkHL4O2iukA2lEj7NwSjh3YP6D6W7vZo11A9dI5z+6VnyTANVT0J97DrvbdGve0/GMUro/lp9CEcJQhaE1y+GcOwgZEF4/WIIxw5CFoTXL4Zw7CBkDRDSsdIkfI1XY0XzW+cFjD0T1bVD8ukJx2bq2cSu/Rv7QnT60RXhl/IgeJisS8J6eJv28NwS1ju31r0hHRP6ZM3PdTgnnPLTVa4JfcLf4dM9IT+pauiVzp1rhPzaBuXC2XmaaqgR8utT1K/6mgXjl+fNm7h5uFBHlEIIIYS6gxBCCPUHIYQQ6g9CCCHUH4QQQqg/CCGEUH8QQvjLhCYs5GqlVjgzsmFCetSzzKlTlwHyz8uVEka+3pnrLrX2FDJCrzhYJORvpCElDBOLhPyzLKWEs09rhO3bTEgJvaC0hUhO/PjlhHS2sYNIFq3jtZzQi96JDUSStW9RICn0ojg13VgPftnzqdVfH9Q82dw95GrPL4VX8EsL62NG8HbepVMzy6pTKL6Cv4OQfbkpNCx4kur2Q8w6Ca0MQvv7hcK9a8KQF34MvcedYdEVL5wbeaqpf9GZF6aCLz42V7zyQrJyakOk9WbIC1XcQcycwqotJHuH9jV0RgTC1nU1FrctRUKSbXUPTFWThAiFJJs4sbeh2y+gQEimsaq7pWkspCW5KSRk95KrfDj22NX/yYaLC0YoJKRcPMe6B9q3t/cq+0b5C7HDA6W5aMwGAAAAAElFTkSuQmCC" />
+        <span class="header__heading-btn-inter">International</span>
+      </div>
+
+      <div class="header__heading-swap-search">
+        <input class="header__heading-search-input" type="text" placeholder="Tìm kiếm" />
+        <i class="header__heading-icon-search fa-solid fa-magnifying-glass fa-2xl"></i>
+      </div>
+
+      <div class="header__heading-swap-btn--logIn">
+        <i class="fa-solid fa-user fa-xl"></i>
+        <span class="header__heading-btn-logIn">Đăng nhập</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- header__navbar -->
+  <div class="header__navbar">
+    <span class="header__navbar-item-icon-bg"></span>
+    <ul class="header__navbar-lists-item">
+      <li class="header__navbar-item">
+        <i class="fa-solid fa-house fa-sm"></i>
+      </li>
+      <li class="header__navbar-item">
+        Thời sự
+        <ul class="header__navbar-item-child">
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Chính trị</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Dân sinh</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Lao động - Việc làm</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Giao thông</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Mekong</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Quỹ hy vọng</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="header__navbar-item">
+        Góc nhìn
+        <ul class="header__navbar-item-child">
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Bình luận nhiều</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Covid 19</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Chính trị & chính sách</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Y tế & sức khỏe</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Kinh doanh & quản trị</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Giáo dục & tri thức</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Môi trường</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Văn hóa & lối sống</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Tác giả</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="header__navbar-item">
+        Thế giới
+        <ul class="header__navbar-item-child">
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Tư liệu</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Phân tích</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Người Việt 5 châu</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Cuộc sống đó đây</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Quân sự</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="header__navbar-item">
+        Video
+        <ul class="header__navbar-item-child">
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Thời sự</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Nhịp sống</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Food</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Tôi kể</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Chuyện núi rừng</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Pháp luật</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Giải trí</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Thể thao</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Số hóa</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Xe</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Sức khỏe</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Du lịch</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Thế giới</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Khoa học</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Giáo dục</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Tọa đàm kinh tế</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Chủ đề</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="header__navbar-item">
+        Podcasts
+        <ul class="header__navbar-item-child">
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">VnExpress hôm nay</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Ly hôn</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Thầm thì</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Bạn ổn không?</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Chuyện đi làm</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Úp mở 18+</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Điểm tin</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Họ nói gì?</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Tiền làm gì?</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Nguy cơ</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Tôi trong gương</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="header__navbar-item">
+        Kinh doanh
+        <ul class="header__navbar-item-child">
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Quốc tế</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Doanh nghiệp</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Chứng khoán</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Bất động sản</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Ebank</a>
+          </li>
+          <li class="header__navbar-item-child-item2">
+            <a href="https://www.w3schools.com">Vĩ mô</a>
+          </li>
+          <a href="https://www.w3schools.com">Tiền của tôi</a>
+      </li>
+      <li class="header__navbar-item-child-item2">
+        <a href="https://www.w3schools.com">Bảo hiểm</a>
+      </li>
+      <li class="header__navbar-item-child-item2">
+        <a href="https://www.w3schools.com">Hàng hóa</a>
+      </li>
+      <li class="header__navbar-item-child-item2">
+        <a href="https://www.w3schools.com">E-commerce 4.0</a>
+      </li>
+      <li class="header__navbar-item-child-item2">
+        <a href="https://www.w3schools.com">Vhome</a>
+      </li>
+      <li class="header__navbar-item-child-item2">
+        <a href="https://www.w3schools.com">eBox</a>
+      </li>
+    </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Khoa học
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Khoa học trong nước</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tin tức</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Phát minh</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Ứng dụng</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Thế giới tự nhiên</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Thường thức</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Sáng kiến Khoa học</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Giải trí
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Giới sao</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Video</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Phim</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Nhạc</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Thời trang</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Làm đẹp</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Sách</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Sân khấu - Mỹ thuật</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Thể thao
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">SEA Games 31</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Bóng đá</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Lịch thi đấu</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tennis</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">VM 2022</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Fun Run</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Bundesliga</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Các môn khác</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">V-League</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Hậu trường</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Video</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Ảnh</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">V-Race</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Trắc nghiệm</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tường thuật</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Pháp luật
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Hồ sơ phá án</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tư vấn</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Video</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Giáo dục
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tin tức</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tuyển sinh</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Chân dung</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Du học</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Học tiếng Anh</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Trắc nghiệm</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Giáo dục 4.0</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Sức khỏe
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tin tức</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tư vấn</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Dinh dưỡng</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Khỏe đẹp</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Đàn ông</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Các bệnh</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Di chứng Covid</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Di truyền</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Đời sống
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tổ ấm</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Bài học sống</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Nhà</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tiêu dùng</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Cooking</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Du lịch
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Điểm đến</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Ẩm thực</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Dấu chân</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Tư vấn</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Cẩm nang</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Ảnh</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Ăn và chơi</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Mở cửa du lịch</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Số hóa
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Công nghệ</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Sản phẩm</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Blockchain</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Diễn đàn Game Việt Nam</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">CTO Summit 2022</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Startup</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Xe
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Thị trường</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Cầm lái</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Diễn đàn</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">V-Car</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Thi bằng lái</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Mua bán</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Ý kiến
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Thời sự</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Đời sống</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Tâm sự
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Chuyên gia gỡ rối</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Hẹn hò</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item">
+      Hài
+      <ul class="header__navbar-item-child">
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Cười</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Đố vui</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Chuyện lạ</a>
+        </li>
+        <li class="header__navbar-item-child-item2">
+          <a href="https://www.w3schools.com">Thú cưng</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="header__navbar-item header__navbar-item-end">
+      Tất cả
+      <i class="header__navbar-item-icon-menu fa-solid fa-bars"></i>
+    </li>
+    </ul>
+  </div>
+
+  <!-- container -->
+  <div class="container">
+
+    <!-- head -->
+    <div class="container__head">
+      <div class="head__heading">
+        <img
+          src="https://i1-vnexpress.vnecdn.net/2022/05/24/2022-05-24t000000z-1813350136-7470-4005-1653379254.jpg?w=680&h=408&q=100&dpr=1&fit=crop&s=qOgjKN7senhVVi66nXrDgw"
+          alt="img" class="head__heading-img">
+        <div class="head__heading-about">
+          <div class="heading__title">Bộ Tứ đầu tư 50 tỷ USD vào cơ sở hạ tầng Ấn Độ - Thái Bình Dương</div>
+          <div class="heading__description">Nhóm Bộ Tứ gồm Mỹ, Nhật, Ấn Độ và Australia công bố kế hoạch đầu tư ít nhất
+            50 tỷ USD vào cơ sở hạ tầng ở Ấn Độ Dương - Thái Bình Dương.</div>
+          <div class="heading__sub">Thế giới</div>
+        </div>
+      </div>
+
+      <div class="head__content">
+        <div class="head__content-news">
+          <div class="head__content-title">Làm rõ thiệt hại khi chậm hoàn thành đường Hồ Chí Minh</div>
+          <span class="head__content-description">Đại biểu Quốc hội Tạ Thị Uên đề nghị Chính phủ làm rõ việc chậm hoàn
+            thành đường Hồ Chí Minh, làm giảm hiệu quả đầu tư và ảnh hưởng đến địa phương.</span>
+        </div>
+        <div class="head__content-news">
+          <div class="head__content-title">Đồng Nai chi 2.600 tỷ đồng làm cao tốc Biên Hòa - Vũng Tàu</div>
+          <span class="head__content-description">Số tiền 2.000 tỷ đồng sẽ được Đồng Nai đưa vào nhằm giải phóng mặt
+            bằng cho dự án cao tốc Biên Hòa - Vũng Tàu qua địa bàn tỉnh.</span>
+        </div>
+        <div class="head__content-news">
+          <div class="head__content-heading">Góc nhìn</div>
+          <div class="head__content-title">Nói với con về bất bình đẳng</div>
+          <span class="head__content-description">Những tổn thương về sự bất bình đẳng hằn sâu vào xã hội, đặc biệt sau
+            Covid-19.</span>
+          <div class="head__content-author">
+            <span class="head__content-name">Lang Minh</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- *content1  -->
+    <div class="container__content">
+      <div class="content__left">
+        <ul class="content__left-lists">
+          <li class="content__left-item">
+            <div class="left__item-title">Ba tháng Nga bế tắc trên chiến trường Ukraine</div>
+            <div class="left__item-swap">
+              <img
+                src="https://i1-vnexpress.vnecdn.net/2022/05/24/ukraine-96-1653384432-4700-1653384531.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=-lNdRtvD3VQ_fzCZpmVj9A"
+                alt="" class="left__item-img">
+              <span class="left__item-des">Nga nhiều lần thay đổi chiến thuật trong ba tháng giao tranh ở Ukraine, nhưng
+                chỉ đạt được một số kết quả nhỏ và chiến sự dần rơi vào bế tắc ở Donbass.</span>
+            </div>
+          </li>
+          <li class="content__left-item">
+            <div class="left__item-title">Làm rõ thiệt hại khi chậm hoàn thành đường Hồ Chí Minh</div>
+            <div class="left__item-swap">
+              <img
+                src="https://i1-vnexpress.vnecdn.net/2022/05/24/1-dong-chi-ta-thi-yen-pho-truo-3750-3505-1653390118.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=fUh03zJhteehWU0bdspqfg"
+                alt="" class="left__item-img">
+              <span class="left__item-des">Đại biểu quốc hội Tạ Thị Yên đề nghị Chính phủ làm rõ việc chậm hoàn thành
+                đường Hồ Chí Minh, làm giảm hiệu quả đầu tư và ảnh hưởng đến địa phương.</span>
+            </div>
+          </li>
+          <li class="content__left-item">
+            <div class="left__item-title">Lương tối thiểu giờ 'quá thấp so với thị trường'</div>
+            <div class="left__item-swap">
+              <img
+                src="https://i1-vnexpress.vnecdn.net/2022/05/24/quyn3494-4032-1653364672-16533-2746-2525-1653365187.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=E2cF9GlWef12GtPbc5jRRQ"
+                alt="" class="left__item-img">
+              <span class="left__item-des">Chuyên gia đánh giá tiền lương tối thiểu giờ đề xuất 16.600-22.500 đồng cho
+                bốn vùng là quá thấp, chưa rõ cơ sở xác định và công thức tính còn máy móc.</span>
+            </div>
+          </li>
+          <li class="content__left-item">
+            <div class="left__item-title">Ba người chết do mưa lớn</div>
+            <div class="left__item-swap">
+              <img
+                src="https://i1-vnexpress.vnecdn.net/2022/05/24/quyn3494-4032-1653364672-16533-2746-2525-1653365187.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=E2cF9GlWef12GtPbc5jRRQ"
+                alt="" class="left__item-img">
+              <span class="left__item-des">Mưa lớn liên tục khiến đất đá sạt lở, lũ quét, ba người ở Tuyên Quang và Hòa
+                Bình tử nạn, nhiều quốc lộ ở Tây Bắc ách tắc.</span>
+            </div>
+          </li>
+          <li class="content__left-item">
+            <div class="left__item-title">Đồng Nai chi 2.600 tỷ đồng làm cao tốc Biên Hòa - Vũng Tàu</div>
+            <div class="left__item-swap">
+              <img
+                src="https://i1-vnexpress.vnecdn.net/2022/05/24/cao-toc-bien-hoa-vung-tau-2104-4275-3708-1653384361.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=3TCgXd0sygjIjA5154sKvg"
+                alt="" class="left__item-img">
+              <span class="left__item-des">
+                Số tiền 2.600 tỷ đồng sẽ được Đồng Nai đưa vào nhằm giải phóng mặt bằng cho dự án cao tốc Biên Hòa -
+                Vũng Tàu qua địa bàn tỉnh.
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content__right-swap">
+        <!-- *1 -->
+        <div class="content__right">
+          <ul class="right__navbar">
+            <li class="right__navbar-item">Kinh doanh</li>
+            <li class="right__navbar-item">Quốc tế</li>
+            <li class="right__navbar-item">Doanh nghiệp</li>
+            <li class="right__navbar-item">Chứng khoán</li>
+            <li class="right__navbar-item">Bất động sản</li>
+            <li class="right__navbar-item">Bảo hiểm</li>
+            <li class="right__navbar-item">E-Commerce 4.0</li>
+          </ul>
+
+          <div class="right__content-new">
+            <div class="content__left-news">
+              <img
+                src="https://i1-kinhdoanh.vnecdn.net/2022/05/24/63aom2urcfo57i6d4rpb5ybh3i-jpe-9122-4385-1653393349.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=wMBUZVlGXBCkESd7QgAliQ"
+                alt="" class="left__news-img">
+              <div class="left__news-swap">
+                <h4 class="left__news-title">Sri Lanka tăng giá xăng dầu lên kỷ lục</h4>
+                <span class="right__news-des">Làn sóng giảm nhân lực diễn ra tại Tencent, Alibaba, Xiaohongshu..khi việc
+                  kinh doanh sa sút vì bị siết kiểm soát và chính sách phong tỏa.</span>
+              </div>
+            </div>
+            <div class="content__right-news">
+              <div class="right__news-swap">
+                <h4 class="right__news-title">Big Tech Trung Quốc sa thải...</h4>
+                <span class="right__news-des">Làn sóng giảm nhân lực diễn ra tại Tencent, Alibaba, Xiaohongshu..khi việc
+                  kinh doanh sa sút vì bị siết kiểm soát và chính sách phong tỏa.</span>
+              </div>
+            </div>
+          </div>
+          <div class="content__bottom">
+            <ul class="content-bottom-swap">
+              <li class="bottom__item">Cổ phiếu thép giảm mạnh</li>
+              <li class="bottom__item">HSBC: 'Chứng khoán Việt Nam vững vàng và có nội lực'</li>
+              <li class="bottom__item">Giá trứng tăng vọt</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- *2 -->
+        <div class="content__right">
+          <ul class="right__navbar">
+            <li class="right__navbar-item">Thể thao</li>
+            <li class="right__navbar-item">Bóng đá</li>
+            <li class="right__navbar-item">Lịch thi đấu</li>
+            <li class="right__navbar-item">Tennis</li>
+            <li class="right__navbar-item">VM 2022</li>
+            <li class="right__navbar-item">V-Race</li>
+            <li class="right__navbar-item">V-League</li>
+          </ul>
+
+          <div class="right__content-new">
+            <div class="content__left-news">
+              <img
+                src="https://i1-thethao.vnecdn.net/2022/05/24/kawin-jpeg-1653367501-16533676-7564-8480-1653367702.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=LJl8i1BwHssn7ZGo6G27Ww"
+                alt="" class="left__news-img">
+              <div class="left__news-swap">
+                <h4 class="left__news-title">Siam Sports: 'Thất bại của Thái Lan được dự báo từ trước'</h4>
+                <span class="right__news-des">Theo truyển thông Thái Lan, quá trình chuẩn bị gấp gáp và thiếu nhân sự
+                  chủ chốt khiến thầy trò Mano ...</span>
+              </div>
+            </div>
+            <div class="content__right-news">
+              <div class="right__news-swap">
+                <h4 class="right__news-title">Bóng đá nữ Việt Nam áp đảo thế nào ở SEA Games 31</h4>
+                <span class="right__news-des">Với chiến thắng ở chung kết SEA Games 32, đội tuyển bóng đá nữ Việt Nam
+                  nối dài kỷ lục vô địch bảy lần...</span>
+              </div>
+            </div>
+          </div>
+          <div class="content__bottom">
+            <ul class="content-bottom-swap">
+              <li class="bottom__item">Djokovic bị khán giả Roland Garros la ó</li>
+              <li class="bottom__item">Malaysia muốn đòi nợ Việt Nam ở giải U23 châu Á'</li>
+              <li class="bottom__item">Ronaldo ngồi một mình sau trận thua Brighton</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- *3 -->
+        <div class="content__right">
+          <ul class="right__navbar">
+            <li class="right__navbar-item">Giải trí</li>
+            <li class="right__navbar-item">Giới sao</li>
+            <li class="right__navbar-item">Phim</li>
+            <li class="right__navbar-item">Nhạc</li>
+            <li class="right__navbar-item">Thời trang</li>
+            <li class="right__navbar-item">Sách</li>
+          </ul>
+
+          <div class="right__content-new">
+            <div class="content__left-news">
+              <img
+                src="https://i1-giaitri.vnecdn.net/2022/05/23/mynhan1-1653286401-5671-1653286438.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=sFQo7bL-uJIHLHbDg2rJqQ"
+                alt="" class="left__news-img">
+              <div class="left__news-swap">
+                <h4 class="left__news-title">Sắc vóc người mẫu gốc Iran Mahlagha Jaberi</h4>
+                <span class="right__news-des">Mahlagha Jaberi, người mẫu gốc Ỉan, được các tạp chí thời trang khen ngợi
+                  vóc dáng, phong cách thời trang cuốn hút.</span>
+              </div>
+            </div>
+            <div class="content__right-news">
+              <div class="right__news-swap">
+                <h4 class="right__news-title">Cannes ngày 7: Sắc đen chiếm lĩnh thảm đỏ</h4>
+                <span class="right__news-des">Naomi Campbeli, Lea Seydoux, Deepika Padukone...đều chọn đầm đen xẻ ngực,
+                  xuyên thấu ở Cannes 2022, hôm 23/4.</span>
+              </div>
+            </div>
+          </div>
+          <div class="content__bottom">
+            <ul class="content-bottom-swap">
+              <li class="bottom__item">Chris Hemsworth khoe cơ bắp trong trailer 'Thor 4'</li>
+              <li class="bottom__item">Tạo hình của Châu Tấn trong phim võ hiệp</li>
+              <li class="bottom__item">'Mission: Impossible 7' hé lộ cảnh hành động của Tom Cruise</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- *content2 -->
+    <div class="container__sub-content">
+      <div class="container__sub-content--swap">
+        <span class="sub__content-heading">Ảnh</span>
+        <div class="sub__content-swap">
+          <img
+            src="https://i1-giaitri.vnecdn.net/2022/05/24/top1-1653362575-2821-1653362697.jpg?w=900&h=540&q=100&dpr=1&fit=crop&s=C9xoHRXJ4gNRAa90aA7khQ"
+            alt="" class="content__swap-img">
+          <div class="sub__content-right">
+            <div class="content__swap-item">
+              <h3 class="item-title">Châu Tử Đan đèo vợ du sơn ngoạn thủy</h3>
+              <div class="item-des">Tài tử Hồng Kông Chân Tử Đan lái xe máy chở vợ - Uổng Thi Thi ngắm cảnh núi non, sâu
+                hồ.</div>
+              <span class="item-time">2h trước</span>
+            </div>
+            <div class="content__swap-item">
+              <h3 class="item-title">Hoa khôi được đặc cách vào chung kết Miss Universe Vietnam</h3>
+              <div class="item-des">
+                Lê Thị Tường Vy - Hoa khôi sinh viên 2022 là thí sinh duy nhất được đặc cách vào chung kết Miss Universe
+                VietNam 2022.
+              </div>
+              <span class="item-time">Giải trí</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- *footer -->
+  <div class="footer__head">
+    <div class="footer__heading-swap">
+      <div class="footer__head-left">
+        <ul class="head__left-lists">
+          <li class="left__list-item">Trang chủ</li>
+          <li class="left__list-item">Video</li>
+          <li class="left__list-item">Podcasts</li>
+          <li class="left__list-item">Ảnh</li>
+          <li class="left__list-item">Infographics</li>
+          <li class="left__list-item">Mới nhất</li>
+          <li class="left__list-item">Xem nhiều</li>
+          <li class="left__list-item">Tin nóng</li>
+        </ul>
+        <ul class="head__left-lists">
+          <li class="left__list-item">Thời sự</li>
+          <li class="left__list-item">Góc nhin</li>
+          <li class="left__list-item">Thế giới</li>
+          <li class="left__list-item">Kinh doanh</li>
+          <li class="left__list-item">Giải trí</li>
+        </ul>
+        <ul class="head__left-lists">
+          <li class="left__list-item">Thể thao</li>
+          <li class="left__list-item">Pháp luật</li>
+          <li class="left__list-item">Giáo dục</li>
+          <li class="left__list-item">Sức khỏe</li>
+          <li class="left__list-item">Đời sống</li>
+          <li class="left__list-item">Du lịch</li>
+        </ul>
+        <ul class="head__left-lists">
+          <li class="left__list-item">Khoa học</li>
+          <li class="left__list-item">Số hóa</li>
+          <li class="left__list-item">Xe</li>
+          <li class="left__list-item">Ý kiến</li>
+          <li class="left__list-item">Tâm sự</li>
+          <li class="left__list-item">Mới nhất</li>
+          <li class="left__list-item">Hài</li>
+        </ul>
+        <ul class="head__left-lists">
+          <li class="left__list-item">Rao vặt</li>
+          <li class="left__list-item">Startup</li>
+          <li class="left__list-item">Mua ảnh VnExpress</li>
+          <li class="left__list-item">Vhome</li>
+          <li class="left__list-item">eBox</li>
+          <li class="left__list-item">eWork</li>
+        </ul>
+      </div>
+
+      <div class="footer__head-right">
+        <p class="head__right-text">Tải Ứng Dụng</p>
+        <div class="head__right-swap-img">
+          <button href="" class="head__right-link" title="VnExpress">
+            <img class="head__right-img"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEWfIk7+/f3///+XADubCkSeHkycEUaWADanOl7GiZvUqrb37PCeFknRoq/Kmafw4ubIj6CpRGTBgpTbusP68/biyNC2ZX2XADqVADSZAD/o0djIkaHYsLyiJ1Pfv8mtSmvt2t+lMVmzYHq8c4mxWHStUG2+eo25bYT+Yi51AAAFGUlEQVR4nO3dfVuqPADHcRgMCR9Qj4SApZXa+3+Hh53uW3JMGzDZQ7/vv3nVPpcCxgZ4RFi5+Iw9S3t7r7JvFE/k273kEdU90P7RqAgX94TTuLCY91/hrLwpzCb2++roNrkhzLa6x6aqSSIUTgPdA1PXthQJTzPd41IXnQmErw69hfXupmoLV07sZf6Phi1hmuselNqKV144D3WPSW3RmRd+OLSfYdEVL9w7tRnWhbwwdk04gdD6ILS/jkIahUY2uz3qDkIaBsVxMTey5zAIbxzI5YXFKjkQc0t3x2KQkOZL9lPf2OrBJYFo7JJCys556Eb8FEnfBIOXFOaZ8T6fESd9heGTDcCaOG9vi1JCGpv/Ef2KHFvDlxJGlSVAn+xa/95KCQsrtkIWObTOMskJN9YISeu4LyOsN8Nvv8LImvG980QZYbS+/AZSVgsDe20GuOA3RClhc6wgyUT3l2xBwbIZYOtMWmehiafivu3rIYQQQk1BCCGE+oMQQgj1ByGEEOoPQggh1B+EEEKov5GFNBq9cc9501O1HLsnpfMWPwnrF2vIvwyw39xTJ2EzUaWhnvOHNgn7zQHbJOw3j2+TsLUZOiYkSb/1NNYIhReLuCQkh5ee69psELKhz/O+axN7C+8epNXml/NT//WlfYXkMNaK4uoYBeGNpb8PFf4Za2lKRIet8+4vFH9uxg1CFoTXL4Zw7CBkQXj9YgjHDkIWhNcv/lXCXd73LLbCC1kfKiyfep7EXsdFoUpp6n/A02wZq5kEMvUsRj0Sfy08K+GK8B8yU/FJNVjIdsYK7gZktNAnH5HjQt/3Bn9ODReS8+A30XThbvDXItOF6eB9zSOECrr8PTJ4Q1S/UuG4S4Y2T5s/2J4Q1C306PBT2NvmymrybJ5QQQWEXYKQBaHyIOwUhCwIlQdhpyBkQag8CDsFIQtC5UHYKQhZECoPwk5ByIJQeYYLFVxhOTFaSPfrwX0cTJ63UHOF5eXvGTj39CvmD1UK3Z8Ddn8e3/W1GAreQrOFSp6QZrCQkHL4O2iukA2lEj7NwSjh3YP6D6W7vZo11A9dI5z+6VnyTANVT0J97DrvbdGve0/GMUro/lp9CEcJQhaE1y+GcOwgZEF4/WIIxw5CFoTXL4Zw7CBkDRDSsdIkfI1XY0XzW+cFjD0T1bVD8ukJx2bq2cSu/Rv7QnT60RXhl/IgeJisS8J6eJv28NwS1ju31r0hHRP6ZM3PdTgnnPLTVa4JfcLf4dM9IT+pauiVzp1rhPzaBuXC2XmaaqgR8utT1K/6mgXjl+fNm7h5uFBHlEIIIYS6gxBCCPUHIYQQ6g9CCCHUH4QQQqg/CCGEUH8QQvjLhCYs5GqlVjgzsmFCetSzzKlTlwHyz8uVEka+3pnrLrX2FDJCrzhYJORvpCElDBOLhPyzLKWEs09rhO3bTEgJvaC0hUhO/PjlhHS2sYNIFq3jtZzQi96JDUSStW9RICn0ojg13VgPftnzqdVfH9Q82dw95GrPL4VX8EsL62NG8HbepVMzy6pTKL6Cv4OQfbkpNCx4kur2Q8w6Ca0MQvv7hcK9a8KQF34MvcedYdEVL5wbeaqpf9GZF6aCLz42V7zyQrJyakOk9WbIC1XcQcycwqotJHuH9jV0RgTC1nU1FrctRUKSbXUPTFWThAiFJJs4sbeh2y+gQEimsaq7pWkspCW5KSRk95KrfDj22NX/yYaLC0YoJKRcPMe6B9q3t/cq+0b5C7HDA6W5aMwGAAAAAElFTkSuQmCC" />
+            VnExpress
+          </button>
+          <button href="" class="head__right-link" title="International">
+            <img class="head__right-img"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEWfIk7+/f3///+XADubCkSeHkycEUaWADanOl7GiZvUqrb37PCeFknRoq/Kmafw4ubIj6CpRGTBgpTbusP68/biyNC2ZX2XADqVADSZAD/o0djIkaHYsLyiJ1Pfv8mtSmvt2t+lMVmzYHq8c4mxWHStUG2+eo25bYT+Yi51AAAFGUlEQVR4nO3dfVuqPADHcRgMCR9Qj4SApZXa+3+Hh53uW3JMGzDZQ7/vv3nVPpcCxgZ4RFi5+Iw9S3t7r7JvFE/k273kEdU90P7RqAgX94TTuLCY91/hrLwpzCb2++roNrkhzLa6x6aqSSIUTgPdA1PXthQJTzPd41IXnQmErw69hfXupmoLV07sZf6Phi1hmuselNqKV144D3WPSW3RmRd+OLSfYdEVL9w7tRnWhbwwdk04gdD6ILS/jkIahUY2uz3qDkIaBsVxMTey5zAIbxzI5YXFKjkQc0t3x2KQkOZL9lPf2OrBJYFo7JJCys556Eb8FEnfBIOXFOaZ8T6fESd9heGTDcCaOG9vi1JCGpv/Ef2KHFvDlxJGlSVAn+xa/95KCQsrtkIWObTOMskJN9YISeu4LyOsN8Nvv8LImvG980QZYbS+/AZSVgsDe20GuOA3RClhc6wgyUT3l2xBwbIZYOtMWmehiafivu3rIYQQQk1BCCGE+oMQQgj1ByGEEOoPQggh1B+EEEKov5GFNBq9cc9501O1HLsnpfMWPwnrF2vIvwyw39xTJ2EzUaWhnvOHNgn7zQHbJOw3j2+TsLUZOiYkSb/1NNYIhReLuCQkh5ee69psELKhz/O+axN7C+8epNXml/NT//WlfYXkMNaK4uoYBeGNpb8PFf4Za2lKRIet8+4vFH9uxg1CFoTXL4Zw7CBkQXj9YgjHDkIWhNcv/lXCXd73LLbCC1kfKiyfep7EXsdFoUpp6n/A02wZq5kEMvUsRj0Sfy08K+GK8B8yU/FJNVjIdsYK7gZktNAnH5HjQt/3Bn9ODReS8+A30XThbvDXItOF6eB9zSOECrr8PTJ4Q1S/UuG4S4Y2T5s/2J4Q1C306PBT2NvmymrybJ5QQQWEXYKQBaHyIOwUhCwIlQdhpyBkQag8CDsFIQtC5UHYKQhZECoPwk5ByIJQeYYLFVxhOTFaSPfrwX0cTJ63UHOF5eXvGTj39CvmD1UK3Z8Ddn8e3/W1GAreQrOFSp6QZrCQkHL4O2iukA2lEj7NwSjh3YP6D6W7vZo11A9dI5z+6VnyTANVT0J97DrvbdGve0/GMUro/lp9CEcJQhaE1y+GcOwgZEF4/WIIxw5CFoTXL4Zw7CBkDRDSsdIkfI1XY0XzW+cFjD0T1bVD8ukJx2bq2cSu/Rv7QnT60RXhl/IgeJisS8J6eJv28NwS1ju31r0hHRP6ZM3PdTgnnPLTVa4JfcLf4dM9IT+pauiVzp1rhPzaBuXC2XmaaqgR8utT1K/6mgXjl+fNm7h5uFBHlEIIIYS6gxBCCPUHIYQQ6g9CCCHUH4QQQqg/CCGEUH8QQvjLhCYs5GqlVjgzsmFCetSzzKlTlwHyz8uVEka+3pnrLrX2FDJCrzhYJORvpCElDBOLhPyzLKWEs09rhO3bTEgJvaC0hUhO/PjlhHS2sYNIFq3jtZzQi96JDUSStW9RICn0ojg13VgPftnzqdVfH9Q82dw95GrPL4VX8EsL62NG8HbepVMzy6pTKL6Cv4OQfbkpNCx4kur2Q8w6Ca0MQvv7hcK9a8KQF34MvcedYdEVL5wbeaqpf9GZF6aCLz42V7zyQrJyakOk9WbIC1XcQcycwqotJHuH9jV0RgTC1nU1FrctRUKSbXUPTFWThAiFJJs4sbeh2y+gQEimsaq7pWkspCW5KSRk95KrfDj22NX/yYaLC0YoJKRcPMe6B9q3t/cq+0b5C7HDA6W5aMwGAAAAAElFTkSuQmCC" />
+            International
+          </button>
+        </div>
+
+        <div class="head__right-swap-contact">
+          <span class="head__right-text">Liên hệ</span>
+          <div class="head__right-swap-text-1">
+            <span class="right__swap-text-1">Tòa soạn</span>
+            <span class="right__swap-text-2">Quảng cáo</span>
+          </div>
+          <span class="right__text">Hợp tác bản quyền</span>
+        </div>
+
+
+        <div class="head__right-swap-hotline">
+          <div class="head__right-text">Đường dây nóng</div>
+          <div class="head__right-swap-text-2">
+            <span class="right__swap-text-phone1">083.888.0123</span>
+            <span>082.233.3555</span>
+          </div>
+          <div class="head__right-swap-text-3">
+            <span>(Hà Nội)</span>
+            <span class="right__swap-add2">(TP. Hồ Chí Minh)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer__heading">
+      <div class="heading__left">
+        <span class="heading__left-name">Báo điện tử</span>
+        <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v606/v2_2019/pc/graphics/logo.svg" alt="logo-Vn Express" class="heading__left-img"/>
+      </div>
+      <div class="heading__right">
+        <span class="heading__right-text">RSS</span>
+        <span class="heading__right-text">Theo dõi trên VnExpress</span>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="bottom__first">
+        <span class="bottom__text bottom__text-bold">Báo tiếng Việt nhiều người xem nhất</span><br>
+        <span class="bottom__text">Thuộc Bộ Khoa học Công nghệ</span><br>
+        <span class="bottom__text">Số giấy phép: 548/GP-BTTTT ngày 24/08/2021
+        </span>
+      </div>
+      <div class="bottom__second">
+        <span class="bottom__text">Tổng biên tập: Phạm Hiếu</span><br>
+        <span class="bottom__text">Địa chỉ: Tầng 5, Tòa nhà FPT, 17 phố Duy Tân, Cầu Giấy, Hà Nội</span><br>
+        <span class="bottom__text">Điện thoại: 024 7300 8899 - máy lẻ 4500</span>
+      </div>
+      <div class="bottom__third">
+        <span class="bottom__text">© 1997-2022. Toàn bộ bản quyền thuộc VnExpress</span>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://kit.fontawesome.com/b262e84550.js" crossorigin="anonymous"></script>
+
+</html>
